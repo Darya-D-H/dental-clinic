@@ -1,0 +1,76 @@
+:root {
+  /* Brand — primary */
+  --primary:        #2e86c8;
+  --primary-dark:   #1a65a0;
+  --primary-deeper: #0e3f66;
+  --primary-light:  #e8f3fb;
+
+  /* Brand — accent */
+  --accent:         #12b896;
+  --accent-dark:    #0a9278;
+  --accent-deeper:  #065c4b;
+  --accent-light:   #e2f7f2;
+
+  /* Surfaces */
+  --bg:             #ffffff;
+  --bg-secondary:   #f5f8fa;
+  --bg-subtle:      #eaf0f6;
+  --bg-card:        #ffffff;
+
+  /* Borders */
+  --border:         #dce6ef;
+  --border-strong:  #b8cedd;
+  --border-focus:   #2e86c8;
+
+  /* Text */
+  --text:           #1a2535;
+  --text-secondary: #486073;
+  --text-muted:     #8da3b5;
+  --text-placeholder:#c8d8e4;
+  --text-on-primary:#ffffff;
+  --text-on-accent: #ffffff;
+
+  /* Semantic states */
+  --success:        #2e9e48;
+  --success-light:  #e8f5ea;
+  --warning:        #f59e0b;
+  --warning-light:  #fff4e2;
+  --error:          #d93025;
+  --error-light:    #fdecea;
+
+  /* Elevation */
+  --shadow-xs:      0 1px 3px rgba(14, 63, 102, 0.06);
+  --shadow-sm:      0 2px 8px rgba(14, 63, 102, 0.09);
+  --shadow-md:      0 6px 20px rgba(14, 63, 102, 0.13);
+  --shadow-lg:      0 16px 48px rgba(14, 63, 102, 0.18);
+
+  /* Shape */
+  --radius-sm:      6px;
+  --radius:         10px;
+  --radius-lg:      16px;
+  --radius-xl:      24px;
+  --radius-pill:    999px;
+
+  /* Motion */
+  --ease:           cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast:0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition:     0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --header-h:       68px;
+  --container:      1160px;
+  --section-gap:    96px;
+
+  /* Typography */
+  --font-display:   'Playfair Display', Georgia, serif;
+  --font-body:      'DM Sans', 'Segoe UI', sans-serif;
+
+  /* Z-index scale */
+  --z-base:         0;
+  --z-dropdown:     100;
+  --z-sticky:       200;
+  --z-overlay:      300;
+  --z-modal:        400;
+  --z-toast:        500;
+}

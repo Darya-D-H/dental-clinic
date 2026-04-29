@@ -1,0 +1,25 @@
+/* main.css — imports only, in cascade order */
+
+/* 1. Base — lowest specificity, broadest scope */
+@import './base/reset.css';
+@import './base/root.css';
+@import './base/typography.css';
+
+/* 2. Layout — structural patterns */
+@import './layout/containers.css';
+@import './layout/grid.css';
+@import './layout/header.css';
+@import './layout/footer.css';
+@import './layout/sections.css';
+
+/* 3. Components — reusable UI pieces */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/nav.css';
+@import './components/forms.css';
+@import './components/hero.css';
+
+/* 4. Pages — most specific, last in cascade */
+@import './pages/faq.css';
+@import './pages/login.css';
+@import './pages/sign-up.css';

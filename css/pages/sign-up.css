@@ -1,0 +1,53 @@
+/* ── Sign-up page ── */
+
+body.signup-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    140deg,
+    var(--primary-deeper) 0%,
+    var(--primary-dark)   50%,
+    #0d7a6b               100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative ambient blobs — mirrored from login for variety */
+body.signup-page::before,
+body.signup-page::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+body.signup-page::before {
+  width: 560px;
+  height: 560px;
+  bottom: -180px;
+  left: -140px;
+  background: radial-gradient(circle, rgba(18, 184, 150, 0.22) 0%, transparent 68%);
+}
+
+body.signup-page::after {
+  width: 480px;
+  height: 480px;
+  top: -160px;
+  right: -120px;
+  background: radial-gradient(circle, rgba(46, 134, 200, 0.28) 0%, transparent 68%);
+}
+
+.signup-page main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  position: relative;
+  z-index: var(--z-base);
+}
+
+/* Slightly wider card to comfortably fit the two-column name row */
+.signup-page .card {
+  max-width: 480px;
+}

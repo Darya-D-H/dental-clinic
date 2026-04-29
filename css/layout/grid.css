@@ -1,0 +1,21 @@
+/* ── Generic responsive grid helpers ── */
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1.5rem);
+}
+
+/* Two-column auto-reflow — breaks to 1 col on narrow screens */
+.grid--2col {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Three-column auto-reflow */
+.grid--3col {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Four-column auto-reflow */
+.grid--4col {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}

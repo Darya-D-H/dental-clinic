@@ -1,0 +1,245 @@
+/* ══════════════════════════════════════════
+   Glass card — login / sign-up pages
+   ══════════════════════════════════════════ */
+
+.card {
+  background: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 24px 64px rgba(14, 63, 102, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  padding: 2.75rem 2.5rem;
+  width: 100%;
+  max-width: 440px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.25rem;
+  }
+}
+
+/* Card header */
+
+.card-header {
+  margin-bottom: 2rem;
+}
+
+.back-home {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.25rem;
+  transition: color var(--transition-fast);
+}
+
+.back-home:hover {
+  color: #ffffff;
+}
+
+.card-header h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.divider {
+  height: 2px;
+  width: 48px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(18, 184, 150, 0.65) 100%
+  );
+  border-radius: var(--radius-pill);
+}
+
+/* Card footer */
+
+.card-footer {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.card-footer p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.card-footer a {
+  color: var(--accent);
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.card-footer a:hover {
+  color: #ffffff;
+}
+
+/* ══════════════════════════════════════════
+   Service card — main page services section
+
+   TEMPLATE — duplicate <article class="service-card"> to add a service.
+   Required elements inside each card:
+     .service-card__icon  — emoji or SVG icon
+     .service-card__title — h3 card title
+     .service-card__body  — short description paragraph
+     <a class="btn btn--outline btn--sm"> — CTA link
+   ══════════════════════════════════════════ */
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  /* Four-row internal grid: icon → title → body (grows) → button */
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 0.875rem;
+  transition:
+    transform   var(--transition),
+    box-shadow  var(--transition),
+    border-color var(--transition-fast);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.service-card__icon {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.service-card__title {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.service-card__body {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Grid container */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* ══════════════════════════════════════════
+   Doctor card — main page doctors section
+
+   TEMPLATE — duplicate <article class="doctor-card"> to add a doctor.
+   Required elements inside each card:
+     .doctor-card__photo-wrap > img.doctor-card__photo
+     .doctor-card__body:
+       .doctor-card__name     — h3
+       .doctor-card__specialty — role text
+       .doctor-card__bio      — short paragraph
+   ══════════════════════════════════════════ */
+
+.doctor-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform   var(--transition),
+    box-shadow  var(--transition),
+    border-color var(--transition-fast);
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.doctor-card__photo-wrap {
+  background: var(--bg-subtle);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.doctor-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.doctor-card__body {
+  padding: clamp(1.25rem, 3vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  flex: 1;
+}
+
+.doctor-card__name {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.doctor-card__specialty {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.doctor-card__bio {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin-top: 0.25rem;
+}
+
+/* Grid container */
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* ── Reduced motion ── */
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .doctor-card {
+    transition: none;
+  }
+
+  .service-card:hover,
+  .doctor-card:hover {
+    transform: none;
+  }
+}

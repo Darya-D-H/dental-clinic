@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login | Dental Clinic</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="icon" type="image/x-icon" href="../assets/icons/tooth-logo.webp">
+    </head>
+    <body class="login-page">
+        <main>
+            <div class="card">
+                <section aria-labelledby="login-heading">
+
+                    <header class="card-header">
+                        <a href="../index.html" class="back-home">← Home</a>
+                        <h1 id="login-heading">Login</h1>
+                        <div class="divider" aria-hidden="true"></div>
+                    </header>
+            
+                    <form id="login-form" method="post" action="#" novalidate>
+            
+                        <fieldset>
+                        
+                            <legend>Account credentials</legend>
+                
+                            <div class="field">
+                                <label for="email">Email address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="JohnDoe@email.com"
+                                    autocomplete="email"
+                                    aria-required="true"
+                                    aria-describedby="email-error"
+                                />
+                                <p class="field-error" id="email-error" role="alert" aria-live="polite"></p>
+                            </div>
+                
+                            <div class="field">
+                                <label for="password">Password</label>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    placeholder="••••••••••••"
+                                    autocomplete="current-password"
+                                    aria-required="true"
+                                    aria-describedby="password-error"
+                                />
+                                <p class="field-error" id="password-error" role="alert" aria-live="polite"></p>
+                            </div>
+                        </fieldset>
+                
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember" />
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+                
+                        <button type="submit">
+                            <span>Access System</span>
+                        </button>
+            
+                    </form>
+
+                    <footer class="card-footer">
+                        <p>No account? <a href="../pages/sign-up.html">Register here</a></p>
+                    </footer>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

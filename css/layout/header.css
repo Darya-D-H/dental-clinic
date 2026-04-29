@@ -1,0 +1,8 @@
+/* ── Site header — wrapper for the fixed pill nav ── */
+
+.site-header {
+  position: relative;
+  z-index: var(--z-sticky);
+  /* Header itself is zero-height; the pill nav floats above the page */
+  height: 0;
+}

@@ -1,0 +1,18 @@
+/* ── Container — keeps content readable inside full-width sections ── */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 5vw, 2.5rem);
+}
+
+/* Narrower variant for forms and prose */
+.container--narrow {
+  max-width: 720px;
+}
+
+/* Tight variant for very short text blocks */
+.container--tight {
+  max-width: 600px;
+}
