@@ -91,21 +91,20 @@
 
    TEMPLATE — duplicate <article class="service-card"> to add a service.
    Required elements inside each card:
-     .service-card__icon  — emoji or SVG icon
-     .service-card__title — h3 card title
-     .service-card__body  — short description paragraph
-     <a class="btn btn--outline btn--sm"> — CTA link
+     .service-card__image-wrap > img  — service image (or leave empty as placeholder)
+     .service-card__body:
+       .service-card__title — h3 card title
+       .service-card__desc  — short description paragraph
+       <a class="btn btn--outline btn--sm"> — CTA link
    ══════════════════════════════════════════ */
 
 .service-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: clamp(1.5rem, 3vw, 2rem);
-  /* Four-row internal grid: icon → title → body (grows) → button */
-  display: grid;
-  grid-template-rows: auto auto 1fr auto;
-  gap: 0.875rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition:
     transform   var(--transition),
     box-shadow  var(--transition),
@@ -118,9 +117,28 @@
   border-color: var(--border-strong);
 }
 
-.service-card__icon {
-  font-size: 2.25rem;
-  line-height: 1;
+.service-card__image-wrap {
+  background: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.service-card__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card__body {
+  padding: clamp(1.25rem, 3vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
 }
 
 .service-card__title {
@@ -130,10 +148,11 @@
   line-height: 1.3;
 }
 
-.service-card__body {
+.service-card__desc {
   font-size: 0.9375rem;
   color: var(--text-secondary);
   line-height: 1.7;
+  flex: 1;
 }
 
 /* Grid container */
