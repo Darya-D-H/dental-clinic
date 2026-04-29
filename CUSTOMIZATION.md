@@ -6,9 +6,6 @@ A plain-language reference for editing every part of this website without touchi
 
 ## What Changed (Latest First)
 
-### Service cards redesigned to image-based layout (`index.html`, `css/components/cards.css`)
-Removed emoji icons from all 6 service cards. Each card now has a `.service-card__image-wrap` placeholder at the top (matching the doctor card layout — image zone on top, text body below). The description paragraph class was renamed from `.service-card__body` to `.service-card__desc`; `.service-card__body` is now the padding wrapper. To add an image to any card, place the file in `assets/images/` and add a `<img>` tag inside `.service-card__image-wrap`.
-
 ### Navigation bar changed from floating pill to full-width glass bar (`css/components/nav.css`, `css/components/hero.css`, `css/base/reset.css`)
 The pill-shaped floating nav (centered, limited width, rounded corners) was replaced with a full-width frosted-glass bar fixed to the top of the viewport. The blur/glass effect is preserved. On mobile, the hamburger dropdown now spans the full width of the nav bar instead of being a small centered panel. `scroll-padding-top` was added to `html` so anchor links scroll to the correct position below the fixed bar.
 
@@ -130,27 +127,20 @@ Change the text inside those tags. The `<br>` inside `hero__title` creates the l
 
 ## Adding a Service Card
 
-Find the `<!-- SERVICE CARD GRID -->` comment in `index.html` (around line 117). Duplicate any `<article>` block and update:
+Find the `<!-- SERVICE CARD GRID -->` comment in `index.html` (around line 95). Duplicate any `<article>` block and update:
 
 ```html
 <article class="service-card scroll-reveal" style="--card-index: 6" role="listitem">
-  <div class="service-card__image-wrap">
-    <img src="assets/images/service-xray.jpg" alt="X-Ray Imaging">
-    <!-- Leave the <img> out (or keep just the div) to show an empty placeholder -->
-  </div>
-  <div class="service-card__body">
-    <h3 class="service-card__title">X-Ray Imaging</h3>
-    <p class="service-card__desc">
-      Digital X-rays with minimal radiation for precise diagnostics.
-    </p>
-    <a href="#contact" class="btn btn--outline btn--sm">Learn More</a>
-  </div>
+  <div class="service-card__icon" aria-hidden="true">🩻</div>
+  <h3 class="service-card__title">X-Ray Imaging</h3>
+  <p class="service-card__body">
+    Digital X-rays with minimal radiation for precise diagnostics.
+  </p>
+  <a href="#contact" class="btn btn--outline btn--sm">Learn More</a>
 </article>
 ```
 
 Increment `--card-index` by 1 from the last card. This controls the stagger delay in the entrance animation.
-
-To add a service image later: place the image file in `assets/images/`, then replace the HTML comment inside `.service-card__image-wrap` with a real `<img>` tag.
 
 ---
 

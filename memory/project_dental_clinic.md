@@ -18,5 +18,3 @@ Static dental clinic website at C:\Users\Darya\Desktop\dental-clinic. Single-pag
 **How to apply:** Always check that `.btn--primary:hover` and any future button hover states explicitly set `color` to prevent the base `a:hover` rule from overriding.
 
 **CSS architecture:** BEM naming + SMACSS file structure. All design tokens in css/base/root.css. Cards use `.scroll-reveal` class with `--card-index` CSS custom property for stagger timing. CLAUDE.md requires all markdown/Phase 1 and markdown/Phase 2 design features to be applied on every prompt.
-
-**Service card structure (updated):** Icons removed. Cards now use the same image-on-top layout as doctor cards — `.service-card__image-wrap` (4:3 aspect-ratio placeholder, `--bg-subtle` background) at the top, then `.service-card__body` (padding wrapper with flex column) containing `.service-card__title`, `.service-card__desc`, and a CTA button. Each card has an HTML comment showing the image `<img>` tag to uncomment when real images are ready.
