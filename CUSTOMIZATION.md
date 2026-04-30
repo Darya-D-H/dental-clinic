@@ -15,13 +15,8 @@ The pill-shaped floating nav (centered, limited width, rounded corners) was repl
 ### Social media icons fixed (`css/layout/footer.css`)
 The icons were invisible because the CSS was applying `filter: brightness(0) invert(1)` — this crushed all color to black then flipped to white, destroying the brand colors of the SVGs. The fix was to remove the filter entirely and let Instagram, Facebook, WhatsApp, and TikTok icons render in their original colors. Size bumped from 18px to 22px for better clarity.
 
-### FAQ page rebuilt (`pages/faq.html`, `css/pages/faq.css`)
-- Navbar removed, replaced with a fixed "← Home" pill button in the top-left corner.
-- Accordion changed from `<details>/<summary>` (cannot enforce one-open-at-a-time in CSS) to a **radio button accordion** — all questions share `name="faq"` so the browser ensures only one is selected at a time. No JavaScript.
-- Footer upgraded to match the full `index.html` footer (four-column grid with brand, links, pages, contact).
-
 ### Earlier changes
-- All JavaScript removed from `index.html` and `pages/faq.html`. The site is now fully JS-free.
+- All JavaScript removed from `index.html`. The site is now fully JS-free.
 - Mobile hamburger uses a CSS checkbox trick.
 - Card entrance animations use CSS `@keyframes` with `animation-delay` stagger.
 - "Book an Appointment" button hover bug fixed (white text was being overridden by `a:hover { color }` in `typography.css`).
@@ -33,9 +28,6 @@ The icons were invisible because the CSS was applying `filter: brightness(0) inv
 ```
 dental-clinic/
 ├── index.html              ← The main page (everything you see)
-├── pages/
-│   ├── faq.html            ← FAQ page
-│   └── login.html          ← Login page
 ├── css/
 │   ├── main.css            ← Imports all other CSS files (don't edit this)
 │   ├── base/
@@ -53,7 +45,7 @@ dental-clinic/
 │       ├── cards.css       ← Service cards, doctor cards
 │       ├── nav.css         ← Navigation bar, mobile menu, hamburger
 │       ├── hero.css        ← Hero section styles and animations
-│       └── forms.css       ← Form and input styles (login/sign-up pages)
+│       └── forms.css       ← Form and input styles
 └── assets/
     ├── images/             ← doctor-male.png, doctor-female.png
     └── icons/              ← tooth-logo.webp, social media SVGs
@@ -222,7 +214,7 @@ The social icons in the footer are SVG files in `assets/icons/`. They render in 
 
 To swap an icon for a different platform:
 1. Place your new `.svg` file in `assets/icons/`
-2. In `index.html` and `pages/faq.html`, find the `footer-social` block and update the `src` and `aria-label`:
+2. In `index.html`, find the `footer-social` block and update the `src` and `aria-label`:
 
 ```html
 <a href="https://your-profile-url" aria-label="Follow us on Twitter">
@@ -319,15 +311,6 @@ Cards fade up on page load. To change the timing, edit `css/layout/sections.css`
 - Increase `80ms` for a more pronounced stagger effect
 
 ---
-
-## Adding a New Page
-
-1. Duplicate `pages/faq.html` as a starting point
-2. Rename it (e.g. `pages/services.html`)
-3. Update the `<title>` and page content
-4. Link to it from the footer's "Pages" nav section in `index.html`
-
-The header CSS assumes a fixed pill nav — your new page will need the same `<header>` HTML and the CSS already handles it.
 
 ---
 

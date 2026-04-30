@@ -19,7 +19,3 @@
 @import './components/forms.css';
 @import './components/hero.css';
 
-/* 4. Pages — most specific, last in cascade */
-@import './pages/faq.css';
-@import './pages/login.css';
-@import './pages/sign-up.css';
