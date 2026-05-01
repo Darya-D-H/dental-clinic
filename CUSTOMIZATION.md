@@ -6,6 +6,9 @@ A plain-language reference for editing every part of this website without touchi
 
 ## What Changed (Latest First)
 
+### Skip link removed (`index.html`, `css/base/typography.css`)
+The `<a class="skip-link" href="#main-content">` anchor and its target `id="main-content"` on `<main>` have been removed. The `.skip-link` and `.skip-link:focus` CSS rules in `typography.css` were deleted along with it.
+
 ### Deleted empty `pages/` folders (`pages/`, `css/pages/`)
 Both the root-level `pages/` folder and `css/pages/` subfolder were empty and have been removed. The site is fully contained in `index.html`; no separate page files exist or are planned.
 

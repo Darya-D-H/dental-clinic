@@ -257,7 +257,7 @@ The `.sr-only` class is one of the most useful patterns in accessible CSS — vi
 }
 ```
 
-Use it for labels on icon-only controls, supplementary screen-reader context, and skip link text.
+Use it for labels on icon-only controls and supplementary screen-reader context.
 
 ---
 
