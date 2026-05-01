@@ -6,6 +6,9 @@ A plain-language reference for editing every part of this website without touchi
 
 ## What Changed (Latest First)
 
+### Deleted empty `pages/` folders (`pages/`, `css/pages/`)
+Both the root-level `pages/` folder and `css/pages/` subfolder were empty and have been removed. The site is fully contained in `index.html`; no separate page files exist or are planned.
+
 ### Service cards redesigned to image-based layout (`index.html`, `css/components/cards.css`)
 Removed emoji icons from all 6 service cards. Each card now has a `.service-card__image-wrap` placeholder at the top (matching the doctor card layout — image zone on top, text body below). The description paragraph class was renamed from `.service-card__body` to `.service-card__desc`; `.service-card__body` is now the padding wrapper. To add an image to any card, place the file in `assets/images/` and add a `<img>` tag inside `.service-card__image-wrap`.
 
