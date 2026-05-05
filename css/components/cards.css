@@ -160,17 +160,3 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: clamp(1rem, 3vw, 1.5rem);
 }
-
-/* ── Reduced motion ── */
-
-@media (prefers-reduced-motion: reduce) {
-  .service-card,
-  .doctor-card {
-    transition: none;
-  }
-
-  .service-card:hover,
-  .doctor-card:hover {
-    transform: none;
-  }
-}

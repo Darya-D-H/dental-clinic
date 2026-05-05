@@ -23,7 +23,6 @@
 
 .hero__eyebrow {
   margin-bottom: 1rem;
-  animation: fadeUp 500ms var(--ease) 0ms both;
 }
 
 .hero__title {
@@ -34,7 +33,6 @@
   letter-spacing: -0.03em;
   color: var(--text);
   margin-bottom: 1.25rem;
-  animation: fadeUp 700ms var(--ease) 100ms both;
 }
 
 .hero__subtitle {
@@ -44,7 +42,6 @@
   max-width: 52ch;
   margin-inline: auto;
   margin-bottom: 2.25rem;
-  animation: fadeUp 600ms var(--ease) 250ms both;
 }
 
 .hero__actions {
@@ -52,31 +49,4 @@
   flex-wrap: wrap;
   gap: 0.875rem;
   justify-content: center;
-  animation: fadeUp 500ms var(--ease) 400ms both;
-}
-
-/* ── Keyframes ── */
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ── Reduced motion ── */
-
-@media (prefers-reduced-motion: reduce) {
-  .hero__eyebrow,
-  .hero__title,
-  .hero__subtitle,
-  .hero__actions {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
 }

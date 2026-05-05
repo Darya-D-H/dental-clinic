@@ -6,6 +6,15 @@ A plain-language reference for editing every part of this website without touchi
 
 ## What Changed (Latest First)
 
+### Nav links styled with pill-shaped background highlight (`css/components/nav.css`)
+Nav links now have `padding: 0.3rem 0.75rem` and `border-radius: var(--radius-pill)`. On hover and when active, they show `color: var(--primary)` and `background: var(--primary-light)` (pale blue pill). No underline, no animation.
+
+### `prefers-reduced-motion` blocks removed (`css/components/nav.css`, `css/components/buttons.css`, `css/components/cards.css`, `css/layout/sections.css`)
+All `@media (prefers-reduced-motion: reduce)` blocks have been deleted from the stylesheet.
+
+### Hero entrance animation removed (`css/components/hero.css`)
+The `fadeUp` keyframe animation and all `animation:` properties have been removed from `.hero__eyebrow`, `.hero__title`, `.hero__subtitle`, and `.hero__actions`. The hero content now appears instantly on load. The `@keyframes fadeUp` definition and the `prefers-reduced-motion` block for hero elements were also deleted.
+
 ### Skip link removed (`index.html`, `css/base/typography.css`)
 The `<a class="skip-link" href="#main-content">` anchor and its target `id="main-content"` on `<main>` have been removed. The `.skip-link` and `.skip-link:focus` CSS rules in `typography.css` were deleted along with it.
 
@@ -15,8 +24,8 @@ Both the root-level `pages/` folder and `css/pages/` subfolder were empty and ha
 ### Service cards redesigned to image-based layout (`index.html`, `css/components/cards.css`)
 Removed emoji icons from all 6 service cards. Each card now has a `.service-card__image-wrap` placeholder at the top (matching the doctor card layout — image zone on top, text body below). The description paragraph class was renamed from `.service-card__body` to `.service-card__desc`; `.service-card__body` is now the padding wrapper. To add an image to any card, place the file in `assets/images/` and add a `<img>` tag inside `.service-card__image-wrap`.
 
-### Navigation bar changed from floating pill to full-width glass bar (`css/components/nav.css`, `css/components/hero.css`, `css/base/reset.css`)
-The pill-shaped floating nav (centered, limited width, rounded corners) was replaced with a full-width frosted-glass bar fixed to the top of the viewport. The blur/glass effect is preserved. On mobile, the hamburger dropdown now spans the full width of the nav bar instead of being a small centered panel. `scroll-padding-top` was added to `html` so anchor links scroll to the correct position below the fixed bar.
+### Navigation bar changed to solid white, hamburger removed (`css/components/nav.css`, `index.html`)
+The frosted-glass/blur nav has been replaced with a solid white (`var(--bg)`) bar with a subtle `var(--border)` bottom line. `backdrop-filter` and all glass styles are gone. The hamburger button, hidden checkbox toggle, and mobile dropdown (`nav-mobile`) have been fully removed from both HTML and CSS. On mobile, only the centered logo is shown — no links or menu.
 
 ### Social media icons fixed (`css/layout/footer.css`)
 The icons were invisible because the CSS was applying `filter: brightness(0) invert(1)` — this crushed all color to black then flipped to white, destroying the brand colors of the SVGs. The fix was to remove the filter entirely and let Instagram, Facebook, WhatsApp, and TikTok icons render in their original colors. Size bumped from 18px to 22px for better clarity.
@@ -49,7 +58,7 @@ dental-clinic/
 │   └── components/
 │       ├── buttons.css     ← All button styles (.btn, .btn--primary, etc.)
 │       ├── cards.css       ← Service cards, doctor cards
-│       ├── nav.css         ← Navigation bar, mobile menu, hamburger
+│       ├── nav.css         ← Navigation bar, mobile logo-center layout
 │       ├── hero.css        ← Hero section styles and animations
 │       └── forms.css       ← Form and input styles
 └── assets/
@@ -234,33 +243,18 @@ The icon size is controlled in `css/layout/footer.css` under `.footer-social img
 
 ## Changing Navigation Links
 
-The nav links appear in three places in `index.html` — update all three to keep them in sync:
+The nav links appear in two places in `index.html` — update both to keep them in sync:
 
-1. `.nav-links` (desktop nav, around line 40)
-2. `.nav-mobile` (mobile dropdown, around line 57)
-3. `.footer-nav` with `aria-label="Quick links"` (footer, near the bottom)
+1. `.nav-links` (desktop nav, around line 35)
+2. `.footer-nav` with `aria-label="Quick links"` (footer, near the bottom)
 
 Each link uses `href="#section-id"` to scroll to a section on the page (e.g. `href="#services"` scrolls to `<section id="services">`).
 
 ---
 
-## How the Mobile Menu Works (No JavaScript)
+## Mobile Navigation Behavior
 
-The hamburger menu uses a hidden HTML checkbox and a CSS sibling selector — no JavaScript:
-
-```html
-<!-- Hidden checkbox acts as the toggle state -->
-<input type="checkbox" id="nav-toggle" class="nav-toggle-check">
-
-<!-- The label triggers the checkbox when clicked -->
-<label for="nav-toggle" class="nav-hamburger-btn">...</label>
-
-<!-- CSS shows the menu when checkbox is checked -->
-<!-- In css/components/nav.css: -->
-<!-- .nav-toggle-check:checked ~ .nav-mobile { display: block; } -->
-```
-
-Clicking the hamburger icon checks/unchecks the hidden checkbox, which CSS uses to show or hide the `.nav-mobile` dropdown. The checkbox itself is invisible (positioned off-screen with opacity 0).
+On screens below 768 px, the desktop nav links and "Book Now" button are hidden. Only the logo remains, centered in the nav bar. There is no hamburger or dropdown menu — the logo links back to `#hero`.
 
 ---
 

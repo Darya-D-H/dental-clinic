@@ -162,9 +162,3 @@
   animation: fadeUp 600ms var(--ease) both;
   animation-delay: calc(var(--card-index, 0) * 80ms);
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .scroll-reveal {
-    animation: none;
-  }
-}
