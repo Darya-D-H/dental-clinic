@@ -6,7 +6,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
-  /* Offset anchor scrolling so fixed pill nav never covers the target */
+  /* Offset anchor scrolling so fixed nav never covers the target */
   scroll-padding-top: calc(var(--header-h) + 1.25rem + 1.5rem);
 }
 

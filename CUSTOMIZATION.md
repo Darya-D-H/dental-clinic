@@ -6,6 +6,12 @@ A plain-language reference for editing every part of this website without touchi
 
 ## What Changed (Latest First)
 
+### All ARIA attributes removed (`index.html`)
+All `aria-label`, `aria-labelledby`, `aria-hidden`, `aria-required`, and `role` attributes have been removed. The heading IDs that existed only for `aria-labelledby` were also removed. `novalidate` was dropped from the form; `aria-required="true"` on the name and email fields was replaced with the HTML `required` attribute so the browser validates those fields for free.
+
+### `.sr-only` utility removed (`css/base/typography.css`, `index.html`)
+The `.sr-only` CSS rule has been deleted from `typography.css`. The two `<span class="sr-only">required</span>` elements inside the Full Name and Email labels in the contact form have also been removed.
+
 ### Nav links styled with pill-shaped background highlight (`css/components/nav.css`)
 Nav links now have `padding: 0.3rem 0.75rem` and `border-radius: var(--radius-pill)`. On hover and when active, they show `color: var(--primary)` and `background: var(--primary-light)` (pale blue pill). No underline, no animation.
 

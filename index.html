@@ -19,16 +19,14 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════
-       HEADER / NAV
-  ═══════════════════════════════════════════ -->
+  <!-- HEADER / NAV -->
   <header class="site-header">
 
-    <nav class="nav-bar" aria-label="Main navigation">
+    <nav class="nav-bar">
 
       <a href="#hero" class="logo">Darya's Dental</a>
 
-      <ul class="nav-links" role="list">
+      <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#doctors">Our Team</a></li>
@@ -43,19 +41,17 @@
 
   </header>
 
-  <!-- ═══════════════════════════════════════════
-       MAIN CONTENT
-  ═══════════════════════════════════════════ -->
+  <!-- MAIN CONTENT -->
   <main>
 
-    <!-- ── HERO ───────────────────────────────── -->
-    <section id="hero" class="hero" aria-labelledby="hero-heading">
+    <!-- HERO -->
+    <section id="hero" class="hero">
       <div class="container">
         <div class="hero__content">
 
           <p class="hero__eyebrow text-overline">Trusted dental care</p>
 
-          <h1 id="hero-heading" class="hero__title">
+          <h1 class="hero__title">
             Your Smile,<br>Our Priority
           </h1>
 
@@ -73,30 +69,23 @@
       </div>
     </section>
 
-    <!-- ── SERVICES ────────────────────────────── -->
-    <section id="services" class="section section--alt" aria-labelledby="services-heading">
+    <!-- SERVICES -->
+    <section id="services" class="section section--alt">
       <div class="container">
 
         <header class="section-header">
           <p class="text-overline">What we offer</p>
-          <h2 id="services-heading" class="section-header__title">Our Services</h2>
+          <h2 class="section-header__title">Our Services</h2>
           <p class="section-header__lead">
             Comprehensive dental care tailored to your needs, delivered
             with the latest technology and a gentle touch.
           </p>
         </header>
 
-        <!-- ─────────────────────────────────────────────────────────────
-             SERVICE CARD GRID
-             To add a new card: duplicate any <article> below.
-             Change: the image src/alt, the <h3> title, and the <p> description.
-             Update --card-index to the next number for stagger timing.
-        ───────────────────────────────────────────────────────────────── -->
-        <div class="services-grid" role="list">
+        <div class="services-grid">
 
-          <article class="service-card scroll-reveal" style="--card-index: 0" role="listitem">
+          <article class="service-card scroll-reveal" style="--card-index: 0">
             <div class="service-card__image-wrap">
-              <!-- Future service image: <img src="assets/images/service-checkup.jpg" alt="General Check-up"> -->
                <img src="assets/images/services-general-checkup.jpg">
             </div>
             <div class="service-card__body">
@@ -109,7 +98,7 @@
             </div>
           </article>
 
-          <article class="service-card scroll-reveal" style="--card-index: 1" role="listitem">
+          <article class="service-card scroll-reveal" style="--card-index: 1">
             <div class="service-card__image-wrap">
                <img src="assets/images/services-teeth-whitening.jpg">
             </div>
@@ -123,7 +112,7 @@
             </div>
           </article>
 
-          <article class="service-card scroll-reveal" style="--card-index: 2" role="listitem">
+          <article class="service-card scroll-reveal" style="--card-index: 2">
             <div class="service-card__image-wrap">
               <img src="assets/images/services-dental-implants.jpg">
             </div>
@@ -137,7 +126,7 @@
             </div>
           </article>
 
-          <article class="service-card scroll-reveal" style="--card-index: 3" role="listitem">
+          <article class="service-card scroll-reveal" style="--card-index: 3">
             <div class="service-card__image-wrap">
                <img src="assets/images/services-orthodontics.jpg">
             </div>
@@ -151,7 +140,7 @@
             </div>
           </article>
 
-          <article class="service-card scroll-reveal" style="--card-index: 4" role="listitem">
+          <article class="service-card scroll-reveal" style="--card-index: 4">
             <div class="service-card__image-wrap">
                <img src="assets/images/services-cosmetic-dentristry.jpg">
             </div>
@@ -165,7 +154,7 @@
             </div>
           </article>
 
-          <article class="service-card scroll-reveal" style="--card-index: 5" role="listitem">
+          <article class="service-card scroll-reveal" style="--card-index: 5">
             <div class="service-card__image-wrap">
                <img src="assets/images/services-root-canal-therapy.jpg">
             </div>
@@ -179,35 +168,26 @@
             </div>
           </article>
 
-        </div><!-- /.services-grid -->
+        </div>
       </div>
     </section>
 
-    <!-- ── DOCTORS ──────────────────────────────── -->
-    <section id="doctors" class="section" aria-labelledby="doctors-heading">
+    <!-- DOCTORS -->
+    <section id="doctors" class="section">
       <div class="container">
 
         <header class="section-header">
           <p class="text-overline">The people behind your care</p>
-          <h2 id="doctors-heading" class="section-header__title">Meet Our Team</h2>
+          <h2 class="section-header__title">Meet Our Team</h2>
           <p class="section-header__lead">
             Our experienced dental professionals are dedicated to making
             every visit comfortable, efficient, and effective.
           </p>
         </header>
 
-        <!-- ─────────────────────────────────────────────────────────────
-             DOCTOR CARD GRID
-             To add a new card: duplicate any <article> below.
-             Change: img src/alt, name, specialty, and bio text.
-             Update --card-index to the next number for stagger timing.
-             Available images:
-               assets/images/doctor-male.png
-               assets/images/doctor-female.png
-        ───────────────────────────────────────────────────────────────── -->
-        <div class="doctors-grid" role="list">
+        <div class="doctors-grid">
 
-          <article class="doctor-card scroll-reveal" style="--card-index: 0" role="listitem">
+          <article class="doctor-card scroll-reveal" style="--card-index: 0">
             <div class="doctor-card__photo-wrap">
               <img
                 class="doctor-card__photo"
@@ -229,7 +209,7 @@
             </div>
           </article>
 
-          <article class="doctor-card scroll-reveal" style="--card-index: 1" role="listitem">
+          <article class="doctor-card scroll-reveal" style="--card-index: 1">
             <div class="doctor-card__photo-wrap">
               <img
                 class="doctor-card__photo"
@@ -251,7 +231,7 @@
             </div>
           </article>
 
-          <article class="doctor-card scroll-reveal" style="--card-index: 2" role="listitem">
+          <article class="doctor-card scroll-reveal" style="--card-index: 2">
             <div class="doctor-card__photo-wrap">
               <img
                 class="doctor-card__photo"
@@ -273,17 +253,17 @@
             </div>
           </article>
 
-        </div><!-- /.doctors-grid -->
+        </div>
       </div>
     </section>
 
-    <!-- ── CONTACT ──────────────────────────────── -->
-    <section id="contact" class="section section--alt" aria-labelledby="contact-heading">
+    <!-- CONTACT -->
+    <section id="contact" class="section section--alt">
       <div class="container">
 
         <header class="section-header">
           <p class="text-overline">Get in touch</p>
-          <h2 id="contact-heading" class="section-header__title">Book an Appointment</h2>
+          <h2 class="section-header__title">Book an Appointment</h2>
           <p class="section-header__lead">
             Fill in the form below or reach us directly — we'd love to
             hear from you.
@@ -294,10 +274,10 @@
 
           <!-- Contact info -->
           <address class="contact-info">
-            <ul class="contact-info__list" role="list">
+            <ul class="contact-info__list">
 
               <li class="contact-info__item">
-                <span class="contact-info__icon" aria-hidden="true">📍</span>
+                <span class="contact-info__icon">📍</span>
                 <div>
                   <strong class="contact-info__label">Address</strong>
                   <p>Erbil, Iraq</p>
@@ -305,7 +285,7 @@
               </li>
 
               <li class="contact-info__item">
-                <span class="contact-info__icon" aria-hidden="true">📞</span>
+                <span class="contact-info__icon">📞</span>
                 <div>
                   <strong class="contact-info__label">Phone</strong>
                   <p><a href="tel:+9647514632525">+964 751 463 2525</a></p>
@@ -313,7 +293,7 @@
               </li>
 
               <li class="contact-info__item">
-                <span class="contact-info__icon" aria-hidden="true">✉️</span>
+                <span class="contact-info__icon">✉️</span>
                 <div>
                   <strong class="contact-info__label">Email</strong>
                   <p><a href="mailto:darya.dler.contact@gmail.com">darya.dler.contact@gmail.com</a></p>
@@ -321,7 +301,7 @@
               </li>
 
               <li class="contact-info__item">
-                <span class="contact-info__icon" aria-hidden="true">🕐</span>
+                <span class="contact-info__icon">🕐</span>
                 <div>
                   <strong class="contact-info__label">Hours</strong>
                   <p>Sun – Thu: 8:00 AM – 6:00 PM</p>
@@ -337,36 +317,28 @@
             class="contact-form"
             method="post"
             action="#"
-            novalidate
-            aria-label="Book an appointment form"
           >
             <div class="field">
-              <label for="contact-name">
-                Full Name <span aria-hidden="true">*</span>
-                <span class="sr-only">required</span>
-              </label>
+              <label for="contact-name">Full Name *</label>
               <input
                 type="text"
                 id="contact-name"
                 name="name"
                 placeholder="Your full name"
                 autocomplete="name"
-                aria-required="true"
+                required
               >
             </div>
 
             <div class="field">
-              <label for="contact-email">
-                Email Address <span aria-hidden="true">*</span>
-                <span class="sr-only">required</span>
-              </label>
+              <label for="contact-email">Email Address *</label>
               <input
                 type="email"
                 id="contact-email"
                 name="email"
                 placeholder="you@example.com"
                 autocomplete="email"
-                aria-required="true"
+                required
               >
             </div>
 
@@ -414,10 +386,8 @@
 
   </main>
 
-  <!-- ═══════════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════════ -->
-  <footer class="site-footer" aria-label="Site footer">
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <div class="container">
 
       <div class="footer-grid">
@@ -428,26 +398,26 @@
           <p class="footer-brand__tagline">
             Gentle, modern dental care for the whole family.
           </p>
-          <div class="footer-social" aria-label="Social media">
-            <a href="https://www.instagram.com" aria-label="Follow us on Instagram">
-              <img src="assets/icons/Instagram.svg" alt="" width="20" height="20">
+          <div class="footer-social">
+            <a href="https://www.instagram.com">
+              <img src="assets/icons/Instagram.svg" alt="Instagram" width="20" height="20">
             </a>
-            <a href="https://www.facebook.com" aria-label="Follow us on Facebook">
-              <img src="assets/icons/Facebook.svg" alt="" width="20" height="20">
+            <a href="https://www.facebook.com">
+              <img src="assets/icons/Facebook.svg" alt="Facebook" width="20" height="20">
             </a>
-            <a href="https://www.tiktok.com/en/" aria-label="Follow us on TikTok">
-              <img src="assets/icons/Tik Tok.svg" alt="" width="20" height="20">
+            <a href="https://www.tiktok.com/en/">
+              <img src="assets/icons/Tik Tok.svg" alt="TikTok" width="20" height="20">
             </a>
-            <a href="https://web.whatsapp.com" aria-label="Contact us on WhatsApp">
-              <img src="assets/icons/WhatsApp.svg" alt="" width="20" height="20">
+            <a href="https://web.whatsapp.com">
+              <img src="assets/icons/WhatsApp.svg" alt="WhatsApp" width="20" height="20">
             </a>
           </div>
         </div>
 
         <!-- Quick links -->
-        <nav class="footer-nav" aria-label="Quick links">
+        <nav class="footer-nav">
           <h3 class="footer-nav__title">Quick Links</h3>
-          <ul role="list">
+          <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#doctors">Our Team</a></li>
@@ -458,23 +428,23 @@
         <!-- Contact details -->
         <address class="footer-contact">
           <h3 class="footer-contact__title">Contact Us</h3>
-          <ul role="list">
+          <ul>
             <li>
-              <span aria-hidden="true">📍</span>
+              <span>📍</span>
               <span>Erbil, Iraq</span>
             </li>
             <li>
-              <span aria-hidden="true">📞</span>
+              <span>📞</span>
               <a href="tel:+9647514532525">+964 751 463 2525</a>
             </li>
             <li>
-              <span aria-hidden="true">✉️</span>
+              <span>✉️</span>
               <a href="mailto:darya.dler.contact@gmail.com">darya.dler.contact@gmail.com</a>
             </li>
           </ul>
         </address>
 
-      </div><!-- /.footer-grid -->
+      </div>
 
       <div class="footer-bottom">
         <p>&copy; <script>document.write(new Date().getFullYear())</script> Darya's Dental. All rights reserved.</p>

@@ -1,14 +1,4 @@
-/* ══════════════════════════════════════════
-   Service card — main page services section
-
-   TEMPLATE — duplicate <article class="service-card"> to add a service.
-   Required elements inside each card:
-     .service-card__image-wrap > img  — service image (or leave empty as placeholder)
-     .service-card__body:
-       .service-card__title — h3 card title
-       .service-card__desc  — short description paragraph
-       <a class="btn btn--outline btn--sm"> — CTA link
-   ══════════════════════════════════════════ */
+/* Service card */
 
 .service-card {
   background: var(--bg-card);
@@ -75,17 +65,7 @@
   gap: clamp(1rem, 3vw, 1.5rem);
 }
 
-/* ══════════════════════════════════════════
-   Doctor card — main page doctors section
-
-   TEMPLATE — duplicate <article class="doctor-card"> to add a doctor.
-   Required elements inside each card:
-     .doctor-card__photo-wrap > img.doctor-card__photo
-     .doctor-card__body:
-       .doctor-card__name     — h3
-       .doctor-card__specialty — role text
-       .doctor-card__bio      — short paragraph
-   ══════════════════════════════════════════ */
+/* Doctor card */
 
 .doctor-card {
   background: var(--bg-card);
